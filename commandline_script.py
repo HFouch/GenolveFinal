@@ -180,73 +180,9 @@ def run(args):
     print()
     print('############################################################################################################')
 
-
-
-    ###############################
-    # JUST FOR TESTING
-
-    solution = [([[1, 2, 3, 4, 15], [-8, -7, 6, -5, -14, -13, -12], [9, 11],
-                  [-20, -19, -18, -17, -16, -32, 10, -31, -30, -29, -28, -27], [21, 22, 23, 24, 25, 26], [-33],
-                  [34, 35, 36, 37, 38, 39, 40]], ('none, this is the source genome', 'N/A')), (
-                [[1, 2, 3, 4, 15], [-8, -7, -6, -5, -14, -13, -12], [9, 11],
-                 [-20, -19, -18, -17, -16, -32, 10, -31, -30, -29, -28, -27], [21, 22, 23, 24, 25, 26], [-33],
-                 [34, 35, 36, 37, 38, 39, 40]], ('inv', (((5.5, 6.5), (6, 7)), ((5.5, 6), (6.5, 7))))), (
-                [[1, 2, 3, 4, 15], [-8, -7, -6, -5, -14, -13, -12], [9, 11], [16, 17, 18, 19, 20],
-                 [21, 22, 23, 24, 25, 26], [27, 28, 29, 30, 31, -10, 32, 33], [34, 35, 36, 37, 38, 39, 40]],
-                ('u_trl', (((16, 32.5), 33), ((32.5, 33), 16)))), (
-                [[1, 2, 3, 4, 5, 6, 7, 8], [9, 11], [12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25, 26],
-                 [27, 28, 29, 30, 31, -10, 32, 33], [34, 35, 36, 37, 38, 39, 40]],
-                ('b_trl', (((4.5, 15), (5, 14.5)), ((4.5, 5), (14.5, 15))))), (
-                [[1, 2, 3, 4, 5, 6, 7, 8], [9, 11], [12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25, 26],
-                 [27, 28, 29, 30, 31, 32, 33], [34, 35, 36, 37, 38, 39, 40], ['o', 10]],
-                ('trp0', (((10, 32), (10.5, 31.5)), ((10, 10.5), (31.5, 32))))), (
-                [[1, 2, 3, 4, 5, 6, 7, 8], [9, 10, 11], [12, 13, 14, 15], [16, 17, 18, 19, 20],
-                 [21, 22, 23, 24, 25, 26], [27, 28, 29, 30, 31, 32, 33], [34, 35, 36, 37, 38, 39, 40]],
-                ('trp1', (((9.5, 11), (10, 10.5)), ((9.5, 10), (10.5, 11)))))]
-
-    paths_operations = []
-    for element in Paths_state:
-        path_operations = [y for (x, y) in element]
-
-        paths_operations.append(path_operations)
-
-    solution_operations = [d for (c, d) in solution]
-
-    path_types = []
-    sol_types = [a for a, b in solution_operations]
-    for element in paths_operations:
-        types = [c for c, d in element]
-        path_types.append(types)
-
-    indexes = []
-    counter = 0
-    for element in path_types:
-        if element == sol_types:
-            indexer = path_types.index(element)
-            counter += 1
-            indexes.append(indexer)
-
-    # for element in indexes:
-    #     for x in Paths_state[element]:
-    #         print(x)
-    #     print()
-    # print('*****')
-    # for element in solution:
-    #     print(element)
-
-    print('sol len: ', len(solution))
-    print('shortest path len: ',len(shortest_paths[0]))
-    print('counter', counter)
-
-    print('And the answer is... ', solution_operations in paths_operations)
-
-    print('Source genome: ',genomeA)
-    print('Target genome: ', genomeB)
-    print()
-    print('Solution: ', solution)
-    ##########################################################################################################
     sys.stdout.close()
     sys.stdout=stdoutOrigin
+    
 def main():
     parser=argparse.ArgumentParser(description='A program that outputs all the optimal set of rearrangment operations that can descripe the evolution of one genome into another')
     parser.add_argument("-genB", help="this is the set of genes representing the target genome", dest='target_genome', required=True)
