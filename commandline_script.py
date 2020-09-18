@@ -162,6 +162,8 @@ def run(args):
     print()
     print('Number of most parsimonious solutions: ', len(shortest_paths))
     print()
+    print('Average number of operations per solution: ', float(tot_inv/len(shortest_paths))+float(tot_trp1/len(shortest_paths))+float(2*(tot_trp2/len(shortest_paths)))+float(tot_b_trl/len(shortest_paths))+float(tot_u_trl/len(shortest_paths))+float(tot_fis/len(shortest_paths))+float(tot_fus/len(shortest_paths)))
+    print()
     print('Average number of each operation per solution:')
     print('Inversions: ', float(tot_inv/len(shortest_paths)), '  Transpositions type 1: ', float(tot_trp1/len(shortest_paths)), '  Transpositions type 2: ', float(tot_trp2/len(shortest_paths)), '  Balanced translocations: ', float(tot_b_trl/len(shortest_paths)), '  Unbalanced translocations: ', float(tot_u_trl/len(shortest_paths)),
           '  Fusions: ', float(tot_fus/len(shortest_paths)),
