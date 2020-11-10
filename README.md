@@ -1,5 +1,6 @@
 # GenolveFinal
 The files nessisary to run Genolve include Class_extremities_and_adjacencies.py, Class_wrDCJ_Node.py, New_network_wrDCJ.py and commandline_script.py
+In addition two .txt files containing the the input genomes and a .txt file containing the weighting ratios will be required.
 
 Genolve takes as input two lists of synteny blocks representing the two input genomes. 
 
