@@ -5,6 +5,6 @@ genA0.txt and genB0.txt are examples of the format in which the input genomes ne
 The Weight_ratios.txt file can be altered in accordance with the cost that the user wants to assign to each of the different rearrangements. The order of the weight ratios are inversions, transpositions, balanced translocations, unbalanced translocation, fissions, fusions
 Python3 is required to run the commandline_script.py file. The following arguments need to be passed to the program: -target your_target_genome.txt -source your_source_genome.txt -list_of_rearrangement_ratios the_weights_you_want_to_assing_to_the_rearrangements.txt -output name_of_output_file.txt
 Example command line:
-genolve -target genome_fileB.txt -source genome_fileA.txt -list_of_rearrangements weights.txt –output A_to_B_output.txt
+genolve -t genome_fileB.txt -s genome_fileA.txt -r weights.txt –o A_to_B_output.txt
 
 [1]  Yancopoulos S, Attie O, Friedberg R. Efficient sorting of genomic permutations by translocation, inversion and block interchange. Bioinformatics 2005; 21:3340–3346
