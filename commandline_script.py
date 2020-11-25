@@ -187,11 +187,11 @@ def run(args):
     
 def main():
     parser=argparse.ArgumentParser(description='A program that outputs all the optimal set of rearrangment operations that can descripe the evolution of one genome into another')
-    parser.add_argument("-target", help="this is the set of genes representing the target genome", dest='target_genome', required=True)
-    parser.add_argument("-source", help="this is the set of genes representing the source genome",
+    parser.add_argument("-t", help="this is the set of genes representing the target genome", dest='target_genome', required=True)
+    parser.add_argument("-s", help="this is the set of genes representing the source genome",
                         dest='source_genome', required=True,)
-    parser.add_argument("-list_of_rearrangement_ratios", help='the ratios in which each rearrangement is expected to occur in the order inversions, transpositions, balanced translocations, unbalanced translocations, fissions, fusions', dest='ratios', required=True)
-    parser.add_argument("-output", help="the name of the output file that will contain the set of rearrangements", dest='output_file', required=True)
+    parser.add_argument("-r", help='the ratios in which each rearrangement is expected to occur in the order inversions, transpositions, balanced translocations, unbalanced translocations, fissions, fusions', dest='ratios', required=True)
+    parser.add_argument("-o", help="the name of the output file that will contain the set of rearrangements", dest='output_file', required=True)
     parser.set_defaults(func=run)
     args=parser.parse_args()
     args.func(args)
